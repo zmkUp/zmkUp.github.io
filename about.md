@@ -8,25 +8,19 @@ summary: ""
 active: about
 ---
 
-投资学习就是最无价的副业！
+  秋名山上行人稀，
 
-转载请注明出处！
+  常有车神较高低，
 
-内容如有Bug，如需更正
+  如今车道依稀在，
 
-欢迎发邮件到邮箱ylfxvvpjqj568@qq.com进行指出！
+  却无当年老司机。
 
-秋名山上行人稀，
+  我不是秋名山车神,我只是个送豆腐的...
 
-常有车神较高低，
+[![railroad]({{ site.images | relative_url }}/rails.jpg)]({{ site.images | relative_url }}/car.jpg)
 
-如今车道依稀在，
-
-却无当年老司机。
-
-我不是秋名山车神,我只是个送豆腐的...
-
-[![railroad]({{ site.images | relative_url }}/rails.jpg)]({{ site.images | relative_url }}/rails.jpg)
+  内容如有Bug，如需更正欢迎发邮件到邮箱  ylfxvvpjqj568@qq.com  进行指出！
 
  
  
