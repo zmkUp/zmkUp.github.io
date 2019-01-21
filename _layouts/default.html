@@ -1,24 +1,22 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" <![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9" <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="{{ site.lang }}">
 
-{% include head.html %}
+  {% include head.html %}
 
-<body>
+  <body>
+    <div id="shadow"></div>
 
-   {% include header.html %}
+      {% include header.html %}
+      {% include aside.html %}
 
-   <div class="content">
-      <div class="container">
-         {{ content }}
-      </div>
-   </div><!-- end .content -->
+    <main class="content-wrapper">
+      {{ content }}
+    </main>
 
-   {% include footer.html %}
-   {% include scripts.html %}
+    {% include footer.html %}
 
-</body>
-
+  </body>
 </html>

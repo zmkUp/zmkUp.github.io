@@ -1,16 +1,20 @@
- <div class="header">
-     <div class="container">
-         <h1 class="logo"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-         <nav class="nav-collapse">
-             <ul class="noList">
-                 {% for link in site.navigation %}{% assign current = nil %}{% if page.url contains link.url or forloop.first and page.url == '/' or page.url == 'index.html' %}{% assign current = 'current' %}{% endif %}
-                 <li class="element {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
-                     <a href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>
-                 </li> 
-                 {% endfor %}
-                 <li> <a href="https://github.com/brianmaierjr/long-haul" target="_blank">GitHub</a></li>
-                 <li><a href="https://github.com/brianmaierjr/long-haul/archive/master.zip">Download Theme</a></li>
-             </ul>
-         </nav>
-     </div>
- </div><!-- end .header -->
+<header class="main-header content-wrapper">
+
+  <input type="checkbox" id="menu-checkbox" />
+
+  <nav class="center-wrapper nav-main">
+
+    <a class="blog-logo" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+    {% for my_page in site.pages %}
+      {% if my_page.active %}
+        <a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+      {% endif %}
+    {% endfor %}
+
+    <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+
+    <label for="menu-checkbox" class="toggle-button" data-open="☰" data-close="☰" onclick></label>
+  </nav>
+
+</header>

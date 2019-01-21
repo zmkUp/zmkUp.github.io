@@ -1,48 +1,73 @@
-![preview Long Haul](/preview.jpg)
+## Voyager
 
-Long Haul is a minimal jekyll theme built with SASS / GULP / BROWSERSYNC / AUTOPREFIXER and focuses on long form blog posts. It is meant to be used as a starting point for a jekyll blog/website.
+Just another jekyll theme. Demo: <http://redvi.github.io/voyager>
 
-If you really enjoy Long Haul and want to give me credit somewhere on the internet send or tweet out your experience with Long Haul and tag me [@brianmaierjr](https://twitter.com/brianmaierjr).
+### Feathures:
 
-#### [View Demo](http://brianmaierjr.com/long-haul)
+All HTML files are compressed (see `_layouts/compress.html`).
 
-## Features
+**Post**
 
-- Minimal, Type Focused Design
-- Built with GULP + SASS + BROWSERSYNC + AUTOPREFIXER
-- SVG Social Icons
-- Responsive Nav Menu
-- XML Feed for RSS Readers
-- Contact Form via Formspree
-- 5 Post Loop with excerpt on Home Page
-- Previous / Next Post Navigation
-- Estimated Reading Time for posts
-- Stylish Drop Cap on posts
-- A Better Type Scale for all devices
+All post settings can be changed. Example:
 
-## Setup
+```
+---
+layout: post
+bg: '2016/background.jpg'
+title: "Post Heading"
+crawlertitle: "page title"
+summary: "post description"
+date: 2016-06-29
+tags : ['front-end']
+slug: post-url
+author: "Author"
+categories: posts
+---
+```
 
-1. [Install Jekyll](http://jekyllrb.com)
-2. Fork the [Long Haul repo](http://github.com/brianmaierjr/long-haul)
-3. Clone it
-4. [Install Bundler](http://bundler.io/)
-5. Run `bundle install`
-6. Install gulp dependencies by running `npm install`
-7. Run Jekyll and watch files by running `gulp`
-8. Customize and watch the magic happen!
+`bg` is a path to background of your article. By default backgrounds are placed in the `assets/images` directory.
 
-## Site Settings
+**Page**
 
-The main settings can be found inside the `_config.yml` file:
+If page contains `active` tag, it will be show on site menu.
 
-- **title:** title of your site
-- **description:** description of your site
-- **url:** your url
-- **paginate:** the amount of posts displayed on homepage
-- **navigation:** these are the links in the main site navigation
-- **social** diverse social media usernames (optional)
-- **google_analytics** Google Analytics key (optional)
+```
+---
+layout: page
+title: "About"
+permalink: /about/
+active: about
+---
+```
 
-## License
+**Archive**
 
-This is [MIT](LICENSE) with no added caveats, so feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer.
+Archive page is sorting posts by tags. No more than one tag in one post.
+
+Good:
+
+```
+tags : ['front-end']
+```
+
+Bad:
+
+```
+tags : ['front-end', 'jekyll']
+```
+
+Don't forget to change `_config.yml`.
+
+**Relative paths**
+
+If your blog is not in the root directory, you can include images with a relative path. For example:
+
+```
+![my_image]({{ site.images | relative_url }}/image.jpg)
+```
+
+## Production environment
+
+Build for production:
+
+`JEKYLL_ENV=production jekyll build`
