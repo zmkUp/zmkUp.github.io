@@ -7,7 +7,6 @@ permalink: /about/
 summary: ""
 active: about
 ---
-
    秋名山上行人稀，
 
    常有车神较高低，
@@ -21,27 +20,3 @@ active: about
 [![railroad]({{ site.images | relative_url }}/car.jpg)]({{ site.images | relative_url }}/car.jpg)
 
    内容如有Bug，如需更正欢迎发邮件到邮箱  ylfxvvpjqj568@qq.com  进行指出！
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
